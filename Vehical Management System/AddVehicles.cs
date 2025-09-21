@@ -14,10 +14,15 @@ namespace Vehical_Management_System
     public partial class AddVehicles : Form
     {
 
-
-        public AddVehicles()
+        private string userRole;
+        public AddVehicles(string userRole)
         {
             InitializeComponent();
+            
+            if (userRole != "Administrator")
+            {
+                btnDelete.Hide();
+            }
         }
 
         SqlConnection conn = new SqlConnection(
@@ -167,7 +172,32 @@ namespace Vehical_Management_System
             dataGridView1.DataSource = dt;
         }
 
+       private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                // get driver_id of selected row
+                string regNo = dataGridView1.SelectedRows[1].Cells["txtRegNo"].Value.ToString();
+                SqlCommand cmd = new SqlCommand(
+                      "DELETE FROM vehicles WHERE txtRegNo = @RegNo", conn);
+                  
+                    conn.Open();
+                    cmd.Parameters.AddWithValue("@RegNo", regNo);
+                    cmd.ExecuteNonQuery();
+                
 
+                MessageBox.Show("Vehicle deleted successfully.");
+
+                // reload grid
+                Getdata();
+            }
+            else
+            {
+                MessageBox.Show("Please select a Vehicle Reg No.");
+            }
+        }
+
+        
     }
 
 }

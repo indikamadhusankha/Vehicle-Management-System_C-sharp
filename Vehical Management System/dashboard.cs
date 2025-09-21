@@ -28,7 +28,7 @@ namespace Vehical_Management_System
 
         private void addVehicleBtn_Click(object sender, EventArgs e)
         {
-            new AddVehicles().Show();
+            new AddVehicles(userRole).Show();
             
         }
 

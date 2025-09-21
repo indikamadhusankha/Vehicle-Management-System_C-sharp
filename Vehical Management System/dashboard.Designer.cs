@@ -40,28 +40,26 @@
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.lable_userInfo = new System.Windows.Forms.Label();
             this.lable_user_role = new System.Windows.Forms.Label();
-            this.splitter1 = new System.Windows.Forms.Splitter();
             this.addDriversPannel = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.MaintainPannel = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.reportsPannel = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.operatorPanel_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.ManageUserPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.addDriversPannel.SuspendLayout();
-            this.MaintainPannel.SuspendLayout();
-            this.reportsPannel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.MaintainPannel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.reportsPannel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,7 +69,7 @@
             this.operatorPanel_1.Controls.Add(this.addVehicleBtn);
             this.operatorPanel_1.Controls.Add(this.pictureBox1);
             this.operatorPanel_1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.operatorPanel_1.Location = new System.Drawing.Point(102, 155);
+            this.operatorPanel_1.Location = new System.Drawing.Point(133, 155);
             this.operatorPanel_1.Name = "operatorPanel_1";
             this.operatorPanel_1.Size = new System.Drawing.Size(132, 85);
             this.operatorPanel_1.TabIndex = 0;
@@ -113,7 +111,7 @@
             this.ManageUserPanel.BackColor = System.Drawing.Color.PowderBlue;
             this.ManageUserPanel.Controls.Add(this.btnManageUser);
             this.ManageUserPanel.Controls.Add(this.pictureBox2);
-            this.ManageUserPanel.Location = new System.Drawing.Point(256, 155);
+            this.ManageUserPanel.Location = new System.Drawing.Point(287, 155);
             this.ManageUserPanel.Name = "ManageUserPanel";
             this.ManageUserPanel.Size = new System.Drawing.Size(140, 85);
             this.ManageUserPanel.TabIndex = 2;
@@ -149,7 +147,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lable_userInfo.AutoSize = true;
             this.lable_userInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lable_userInfo.Location = new System.Drawing.Point(97, 87);
+            this.lable_userInfo.Location = new System.Drawing.Point(128, 87);
             this.lable_userInfo.Name = "lable_userInfo";
             this.lable_userInfo.Size = new System.Drawing.Size(71, 25);
             this.lable_userInfo.TabIndex = 5;
@@ -160,30 +158,31 @@
             this.lable_user_role.AutoSize = true;
             this.lable_user_role.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lable_user_role.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lable_user_role.Location = new System.Drawing.Point(98, 116);
+            this.lable_user_role.Location = new System.Drawing.Point(129, 116);
             this.lable_user_role.Name = "lable_user_role";
             this.lable_user_role.Size = new System.Drawing.Size(80, 20);
             this.lable_user_role.TabIndex = 6;
             this.lable_user_role.Text = "User Role";
-            // 
-            // splitter1
-            // 
-            this.splitter1.BackColor = System.Drawing.Color.DarkCyan;
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(85, 595);
-            this.splitter1.TabIndex = 7;
-            this.splitter1.TabStop = false;
             // 
             // addDriversPannel
             // 
             this.addDriversPannel.BackColor = System.Drawing.Color.PowderBlue;
             this.addDriversPannel.Controls.Add(this.pictureBox4);
             this.addDriversPannel.Controls.Add(this.button1);
-            this.addDriversPannel.Location = new System.Drawing.Point(417, 155);
+            this.addDriversPannel.Location = new System.Drawing.Point(448, 155);
             this.addDriversPannel.Name = "addDriversPannel";
             this.addDriversPannel.Size = new System.Drawing.Size(146, 85);
             this.addDriversPannel.TabIndex = 8;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(30, 4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 13;
+            this.pictureBox4.TabStop = false;
             // 
             // button1
             // 
@@ -201,10 +200,20 @@
             this.MaintainPannel.BackColor = System.Drawing.Color.PowderBlue;
             this.MaintainPannel.Controls.Add(this.pictureBox5);
             this.MaintainPannel.Controls.Add(this.button2);
-            this.MaintainPannel.Location = new System.Drawing.Point(582, 155);
+            this.MaintainPannel.Location = new System.Drawing.Point(613, 155);
             this.MaintainPannel.Name = "MaintainPannel";
             this.MaintainPannel.Size = new System.Drawing.Size(146, 85);
             this.MaintainPannel.TabIndex = 10;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(27, 4);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 13;
+            this.pictureBox5.TabStop = false;
             // 
             // button2
             // 
@@ -222,10 +231,20 @@
             this.reportsPannel.BackColor = System.Drawing.Color.PowderBlue;
             this.reportsPannel.Controls.Add(this.pictureBox6);
             this.reportsPannel.Controls.Add(this.button3);
-            this.reportsPannel.Location = new System.Drawing.Point(745, 155);
+            this.reportsPannel.Location = new System.Drawing.Point(776, 155);
             this.reportsPannel.Name = "reportsPannel";
             this.reportsPannel.Size = new System.Drawing.Size(146, 85);
             this.reportsPannel.TabIndex = 11;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(24, 4);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 13;
+            this.pictureBox6.TabStop = false;
             // 
             // button3
             // 
@@ -238,43 +257,14 @@
             this.button3.Text = "Reports";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // pictureBox3
+            // panel1
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(-23, -46);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox3.TabIndex = 12;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(30, 4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 13;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(27, 4);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 13;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(24, 4);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 13;
-            this.pictureBox6.TabStop = false;
+            this.panel1.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(122, 595);
+            this.panel1.TabIndex = 12;
             // 
             // dashboard
             // 
@@ -282,11 +272,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(1130, 595);
-            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.reportsPannel);
             this.Controls.Add(this.MaintainPannel);
             this.Controls.Add(this.addDriversPannel);
-            this.Controls.Add(this.splitter1);
             this.Controls.Add(this.lable_user_role);
             this.Controls.Add(this.lable_userInfo);
             this.Controls.Add(this.ManageUserPanel);
@@ -304,11 +293,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.addDriversPannel.ResumeLayout(false);
-            this.MaintainPannel.ResumeLayout(false);
-            this.reportsPannel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.MaintainPannel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.reportsPannel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -327,7 +315,6 @@
         private System.Windows.Forms.Button addVehicleBtn;
         private System.Windows.Forms.Label lable_userInfo;
         private System.Windows.Forms.Label lable_user_role;
-        private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.Panel addDriversPannel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel MaintainPannel;
@@ -336,7 +323,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -51,6 +51,7 @@
             this.vehiclemanagementDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.vehicle_managementDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehiclemanagementDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -234,11 +235,11 @@
             this.btn_add_vehicle_submit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_add_vehicle_submit.FlatAppearance.BorderSize = 0;
             this.btn_add_vehicle_submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add_vehicle_submit.Location = new System.Drawing.Point(213, 442);
+            this.btn_add_vehicle_submit.Location = new System.Drawing.Point(213, 432);
             this.btn_add_vehicle_submit.Name = "btn_add_vehicle_submit";
             this.btn_add_vehicle_submit.Size = new System.Drawing.Size(142, 36);
             this.btn_add_vehicle_submit.TabIndex = 17;
-            this.btn_add_vehicle_submit.Text = "Submit";
+            this.btn_add_vehicle_submit.Text = "Add Vehicle";
             this.btn_add_vehicle_submit.UseVisualStyleBackColor = false;
             this.btn_add_vehicle_submit.Click += new System.EventHandler(this.btn_add_vehicle_submit_Click);
             // 
@@ -269,11 +270,26 @@
             this.dataGridView1.Size = new System.Drawing.Size(638, 347);
             this.dataGridView1.TabIndex = 19;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(952, 479);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(142, 36);
+            this.btnDelete.TabIndex = 20;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // AddVehicles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1115, 578);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtYearManuf);
             this.Controls.Add(this.btn_add_vehicle_submit);
@@ -329,5 +345,6 @@
         private vehicle_managementDataSet vehicle_managementDataSet;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

@@ -3,40 +3,24 @@
   "WorkspaceRootPath": "E:\\BIT\\Sem_02\\03 Visual Applications - ITE1133\\Assignments\\Assignment_01\\Final Project\\Vehical Management System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|e:\\bit\\sem_02\\03 visual applications - ite1133\\assignments\\assignment_01\\final project\\vehical management system\\vehical management system\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|solutionrelative:vehical management system\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|e:\\bit\\sem_02\\03 visual applications - ite1133\\assignments\\assignment_01\\final project\\vehical management system\\vehical management system\\addvehicles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|solutionrelative:vehical management system\\addvehicles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|e:\\bit\\sem_02\\03 visual applications - ite1133\\assignments\\assignment_01\\final project\\vehical management system\\vehical management system\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|solutionrelative:vehical management system\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|e:\\bit\\sem_02\\03 visual applications - ite1133\\assignments\\assignment_01\\final project\\vehical management system\\vehical management system\\manageuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|solutionrelative:vehical management system\\manageuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|e:\\bit\\sem_02\\03 visual applications - ite1133\\assignments\\assignment_01\\final project\\vehical management system\\vehical management system\\dashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|solutionrelative:vehical management system\\dashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|e:\\bit\\sem_02\\03 visual applications - ite1133\\assignments\\assignment_01\\final project\\vehical management system\\vehical management system\\manageuser.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|solutionrelative:vehical management system\\manageuser.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|e:\\bit\\sem_02\\03 visual applications - ite1133\\assignments\\assignment_01\\final project\\vehical management system\\vehical management system\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|solutionrelative:vehical management system\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|e:\\bit\\sem_02\\03 visual applications - ite1133\\assignments\\assignment_01\\final project\\vehical management system\\vehical management system\\manageuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|solutionrelative:vehical management system\\manageuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|e:\\bit\\sem_02\\03 visual applications - ite1133\\assignments\\assignment_01\\final project\\vehical management system\\vehical management system\\addvehicles.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|solutionrelative:vehical management system\\addvehicles.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|e:\\bit\\sem_02\\03 visual applications - ite1133\\assignments\\assignment_01\\final project\\vehical management system\\vehical management system\\addvehicles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|solutionrelative:vehical management system\\addvehicles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|e:\\bit\\sem_02\\03 visual applications - ite1133\\assignments\\assignment_01\\final project\\vehical management system\\vehical management system\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|solutionrelative:vehical management system\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|e:\\bit\\sem_02\\03 visual applications - ite1133\\assignments\\assignment_01\\final project\\vehical management system\\vehical management system\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|solutionrelative:vehical management system\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|e:\\bit\\sem_02\\03 visual applications - ite1133\\assignments\\assignment_01\\final project\\vehical management system\\vehical management system\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|solutionrelative:vehical management system\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -55,115 +39,65 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "manageUser.Designer.cs",
-              "DocumentMoniker": "E:\\BIT\\Sem_02\\03 Visual Applications - ITE1133\\Assignments\\Assignment_01\\Final Project\\Vehical Management System\\Vehical Management System\\manageUser.Designer.cs",
-              "RelativeDocumentMoniker": "Vehical Management System\\manageUser.Designer.cs",
-              "ToolTip": "E:\\BIT\\Sem_02\\03 Visual Applications - ITE1133\\Assignments\\Assignment_01\\Final Project\\Vehical Management System\\Vehical Management System\\manageUser.Designer.cs",
-              "RelativeToolTip": "Vehical Management System\\manageUser.Designer.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T08:19:52.806Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "dashboard.Designer.cs",
-              "DocumentMoniker": "E:\\BIT\\Sem_02\\03 Visual Applications - ITE1133\\Assignments\\Assignment_01\\Final Project\\Vehical Management System\\Vehical Management System\\dashboard.Designer.cs",
-              "RelativeDocumentMoniker": "Vehical Management System\\dashboard.Designer.cs",
-              "ToolTip": "E:\\BIT\\Sem_02\\03 Visual Applications - ITE1133\\Assignments\\Assignment_01\\Final Project\\Vehical Management System\\Vehical Management System\\dashboard.Designer.cs",
-              "RelativeToolTip": "Vehical Management System\\dashboard.Designer.cs",
-              "ViewState": "AgIAAH8AAAAAAAAAAAAkwJAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T08:22:09.526Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "dashboard.cs [Design]",
-              "DocumentMoniker": "E:\\BIT\\Sem_02\\03 Visual Applications - ITE1133\\Assignments\\Assignment_01\\Final Project\\Vehical Management System\\Vehical Management System\\dashboard.cs",
-              "RelativeDocumentMoniker": "Vehical Management System\\dashboard.cs",
-              "ToolTip": "E:\\BIT\\Sem_02\\03 Visual Applications - ITE1133\\Assignments\\Assignment_01\\Final Project\\Vehical Management System\\Vehical Management System\\dashboard.cs [Design]",
-              "RelativeToolTip": "Vehical Management System\\dashboard.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T08:16:51.428Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "dashboard.cs",
-              "DocumentMoniker": "E:\\BIT\\Sem_02\\03 Visual Applications - ITE1133\\Assignments\\Assignment_01\\Final Project\\Vehical Management System\\Vehical Management System\\dashboard.cs",
-              "RelativeDocumentMoniker": "Vehical Management System\\dashboard.cs",
-              "ToolTip": "E:\\BIT\\Sem_02\\03 Visual Applications - ITE1133\\Assignments\\Assignment_01\\Final Project\\Vehical Management System\\Vehical Management System\\dashboard.cs",
-              "RelativeToolTip": "Vehical Management System\\dashboard.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T08:01:51.332Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "login.cs [Design]",
-              "DocumentMoniker": "E:\\BIT\\Sem_02\\03 Visual Applications - ITE1133\\Assignments\\Assignment_01\\Final Project\\Vehical Management System\\Vehical Management System\\login.cs",
-              "RelativeDocumentMoniker": "Vehical Management System\\login.cs",
-              "ToolTip": "E:\\BIT\\Sem_02\\03 Visual Applications - ITE1133\\Assignments\\Assignment_01\\Final Project\\Vehical Management System\\Vehical Management System\\login.cs [Design]",
-              "RelativeToolTip": "Vehical Management System\\login.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T07:49:47.617Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "login.cs",
               "DocumentMoniker": "E:\\BIT\\Sem_02\\03 Visual Applications - ITE1133\\Assignments\\Assignment_01\\Final Project\\Vehical Management System\\Vehical Management System\\login.cs",
               "RelativeDocumentMoniker": "Vehical Management System\\login.cs",
               "ToolTip": "E:\\BIT\\Sem_02\\03 Visual Applications - ITE1133\\Assignments\\Assignment_01\\Final Project\\Vehical Management System\\Vehical Management System\\login.cs",
               "RelativeToolTip": "Vehical Management System\\login.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAYwEYAAABNAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T07:47:25.871Z",
+              "WhenOpened": "2025-09-21T15:54:16.892Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "manageUser.cs [Design]",
-              "DocumentMoniker": "E:\\BIT\\Sem_02\\03 Visual Applications - ITE1133\\Assignments\\Assignment_01\\Final Project\\Vehical Management System\\Vehical Management System\\manageUser.cs",
-              "RelativeDocumentMoniker": "Vehical Management System\\manageUser.cs",
-              "ToolTip": "E:\\BIT\\Sem_02\\03 Visual Applications - ITE1133\\Assignments\\Assignment_01\\Final Project\\Vehical Management System\\Vehical Management System\\manageUser.cs [Design]",
-              "RelativeToolTip": "Vehical Management System\\manageUser.cs [Design]",
+              "DocumentIndex": 3,
+              "Title": "dashboard.cs",
+              "DocumentMoniker": "E:\\BIT\\Sem_02\\03 Visual Applications - ITE1133\\Assignments\\Assignment_01\\Final Project\\Vehical Management System\\Vehical Management System\\dashboard.cs",
+              "RelativeDocumentMoniker": "Vehical Management System\\dashboard.cs",
+              "ToolTip": "E:\\BIT\\Sem_02\\03 Visual Applications - ITE1133\\Assignments\\Assignment_01\\Final Project\\Vehical Management System\\Vehical Management System\\dashboard.cs",
+              "RelativeToolTip": "Vehical Management System\\dashboard.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T06:17:15.721Z",
+              "WhenOpened": "2025-09-21T15:53:50.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddVehicles.Designer.cs",
+              "DocumentMoniker": "E:\\BIT\\Sem_02\\03 Visual Applications - ITE1133\\Assignments\\Assignment_01\\Final Project\\Vehical Management System\\Vehical Management System\\AddVehicles.Designer.cs",
+              "RelativeDocumentMoniker": "Vehical Management System\\AddVehicles.Designer.cs",
+              "ToolTip": "E:\\BIT\\Sem_02\\03 Visual Applications - ITE1133\\Assignments\\Assignment_01\\Final Project\\Vehical Management System\\Vehical Management System\\AddVehicles.Designer.cs",
+              "RelativeToolTip": "Vehical Management System\\AddVehicles.Designer.cs",
+              "ViewState": "AgIAAP0AAAAAAAAAAAAkwBwBAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T15:45:19.806Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AddVehicles.cs [Design]",
+              "DocumentMoniker": "E:\\BIT\\Sem_02\\03 Visual Applications - ITE1133\\Assignments\\Assignment_01\\Final Project\\Vehical Management System\\Vehical Management System\\AddVehicles.cs",
+              "RelativeDocumentMoniker": "Vehical Management System\\AddVehicles.cs",
+              "ToolTip": "E:\\BIT\\Sem_02\\03 Visual Applications - ITE1133\\Assignments\\Assignment_01\\Final Project\\Vehical Management System\\Vehical Management System\\AddVehicles.cs [Design]",
+              "RelativeToolTip": "Vehical Management System\\AddVehicles.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T15:44:06.537Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "AddVehicles.cs",
               "DocumentMoniker": "E:\\BIT\\Sem_02\\03 Visual Applications - ITE1133\\Assignments\\Assignment_01\\Final Project\\Vehical Management System\\Vehical Management System\\AddVehicles.cs",
               "RelativeDocumentMoniker": "Vehical Management System\\AddVehicles.cs",
               "ToolTip": "E:\\BIT\\Sem_02\\03 Visual Applications - ITE1133\\Assignments\\Assignment_01\\Final Project\\Vehical Management System\\Vehical Management System\\AddVehicles.cs",
               "RelativeToolTip": "Vehical Management System\\AddVehicles.cs",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAkwJYAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T06:14:02.171Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "manageUser.cs",
-              "DocumentMoniker": "E:\\BIT\\Sem_02\\03 Visual Applications - ITE1133\\Assignments\\Assignment_01\\Final Project\\Vehical Management System\\Vehical Management System\\manageUser.cs",
-              "RelativeDocumentMoniker": "Vehical Management System\\manageUser.cs",
-              "ToolTip": "E:\\BIT\\Sem_02\\03 Visual Applications - ITE1133\\Assignments\\Assignment_01\\Final Project\\Vehical Management System\\Vehical Management System\\manageUser.cs",
-              "RelativeToolTip": "Vehical Management System\\manageUser.cs",
-              "ViewState": "AgIAAIcAAAAAAAAAAAAowKYAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T06:13:54.069Z",
+              "WhenOpened": "2025-09-21T15:28:05.636Z",
               "EditorCaption": ""
             }
           ]

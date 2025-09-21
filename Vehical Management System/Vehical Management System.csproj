@@ -74,6 +74,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="drivers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="drivers.Designer.cs">
+      <DependentUpon>drivers.cs</DependentUpon>
+    </Compile>
     <Compile Include="manageUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </Compile>
     <EmbeddedResource Include="AddVehicles.resx">
       <DependentUpon>AddVehicles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="drivers.resx">
+      <DependentUpon>drivers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="manageUser.resx">
       <DependentUpon>manageUser.cs</DependentUpon>
