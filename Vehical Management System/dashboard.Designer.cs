@@ -38,8 +38,8 @@
             this.btnManageUser = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.panelContainer = new System.Windows.Forms.Panel();
             this.usermn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -53,7 +53,7 @@
             this.panel1.Controls.Add(this.addVehicleBtn);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel1.Location = new System.Drawing.Point(45, 102);
+            this.panel1.Location = new System.Drawing.Point(45, 133);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(132, 85);
             this.panel1.TabIndex = 0;
@@ -72,7 +72,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(13, 7);
+            this.pictureBox1.Location = new System.Drawing.Point(13, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(104, 45);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -95,7 +95,7 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.btnManageUser);
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Location = new System.Drawing.Point(183, 102);
+            this.panel2.Location = new System.Drawing.Point(183, 133);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(140, 85);
             this.panel2.TabIndex = 2;
@@ -124,13 +124,6 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // panelContainer
-            // 
-            this.panelContainer.Location = new System.Drawing.Point(410, 102);
-            this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(682, 351);
-            this.panelContainer.TabIndex = 3;
-            // 
             // usermn
             // 
             this.usermn.Location = new System.Drawing.Point(45, 255);
@@ -141,14 +134,24 @@
             this.usermn.UseVisualStyleBackColor = true;
             this.usermn.Click += new System.EventHandler(this.usermn_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(529, 83);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "fname";
+            
+            // 
             // dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(1130, 491);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.usermn);
-            this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dashbosrd_title);
             this.Controls.Add(this.panel1);
@@ -178,7 +181,7 @@
         private System.Windows.Forms.Button btnManageUser;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button addVehicleBtn;
-        private System.Windows.Forms.Panel panelContainer;
         private System.Windows.Forms.Button usermn;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -12,9 +12,16 @@ namespace Vehical_Management_System
 {
     public partial class dashboard : Form
     {
-        public dashboard()
+        private string firstName;
+        private string lastName;
+        private string userRole;
+
+        public dashboard(string firstName, string lastName, string UserRole)
         {
             InitializeComponent();
+
+            string fName = firstName;
+            string lName = lastName;
         }
 
         private void addVehicleBtn_Click(object sender, EventArgs e)
@@ -38,7 +45,7 @@ namespace Vehical_Management_System
         private void LoadFormInPanel(Form frm)
         {
             // Clear previous controls
-            panelContainer.Controls.Clear();
+           // panelContainer.Controls.Clear();
 
             // Make the form a child of panel
             frm.TopLevel = false;  // Form එක top-level නොවන විදිහට
@@ -46,7 +53,7 @@ namespace Vehical_Management_System
             frm.Dock = DockStyle.Fill; // panel එක පුරා expand කරන්න
 
             // Add form to panel
-            panelContainer.Controls.Add(frm);
+          //  panelContainer.Controls.Add(frm);
             frm.Show();
         }
 
@@ -55,5 +62,7 @@ namespace Vehical_Management_System
             Form myForm = new ManageUser();
             LoadFormInPanel(myForm);
         }
+
+        
     }
 }

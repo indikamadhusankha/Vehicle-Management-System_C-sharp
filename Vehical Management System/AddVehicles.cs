@@ -32,6 +32,33 @@ namespace Vehical_Management_System
                 txtRegNo.Focus();
                 return false;
             }
+
+            string checkUserQuery = "SELECT COUNT(*) FROM vehicles WHERE txtRegNo = @RegNo";
+
+            using (SqlConnection conn = new SqlConnection(
+                "Data Source=(localdb)\\ProjectModels;Initial Catalog=vehicle_management;Integrated Security=True;TrustServerCertificate=True"))
+            {
+                using (SqlCommand cmd = new SqlCommand(checkUserQuery, conn))
+                {
+                    conn.Open();
+
+                    cmd.Parameters.AddWithValue("@RegNo", txtRegNo.Text.Trim());
+
+                    int userCount = (int)cmd.ExecuteScalar(); // returns number of rows with that username
+
+                    if (userCount > 0)
+                    {
+                        MessageBox.Show("This vehicle is already registered!");
+                        txtRegNo.Focus();
+                        return false;
+                    }
+                } // SqlCommand disposed
+            }
+
+
+
+
+
             if (txtVehType.Text.Trim() == "")
             {
                 MessageBox.Show("Please Select Vehicle Type");

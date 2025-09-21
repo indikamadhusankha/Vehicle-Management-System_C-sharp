@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,16 +24,60 @@ namespace Vehical_Management_System
 
         }
 
+        public static string ComputeSha256Hash(string rawData)
+        {
+            // Create a SHA256
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                // ComputeHash returns byte array
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(rawData));
+
+                // Convert byte array to a string
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2")); // hex format
+                }
+                return builder.ToString();
+            }
+        }
+        
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            if(txtUserName.Text == "indika" &&  txtPassword.Text == "12345")
+            string userName = txtUserName.Text.Trim();
+            string password = txtPassword.Text.Trim();
+            string hashedPassword = ComputeSha256Hash(password);
+
+            string checkUserQuery = "SELECT TOP 1 firstName, lastName, user_role FROM Users WHERE user_name = @user_name AND hashed_password = @password";
+
+            using (SqlConnection conn = new SqlConnection(
+                "Data Source=(localdb)\\ProjectModels;Initial Catalog=vehicle_management;Integrated Security=True;TrustServerCertificate=True"))
             {
-                new dashboard().Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Username or Password is invalid.");
+                using (SqlCommand cmd = new SqlCommand(checkUserQuery, conn))
+                {
+                    conn.Open();
+                    cmd.Parameters.AddWithValue("@user_name", userName);
+                    cmd.Parameters.AddWithValue("@password", hashedPassword);
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            string firstName = reader["firstName"].ToString();
+                            string lastName = reader["lastName"].ToString();
+                            string UserRole = reader["user_role"].ToString();
+
+                            // Pass role to Dashboard
+                            dashboard dashboardForm = new dashboard(firstName, lastName, UserRole);
+                            dashboardForm.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Username or Password is invalid.");
+                        }
+                    }
+                }
             }
         }
 

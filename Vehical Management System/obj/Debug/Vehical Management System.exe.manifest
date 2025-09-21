@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Vehical Management System.exe" size="114728">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Vehical Management System.exe" size="120360">
       <assemblyIdentity name="Vehical Management System" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>FankH2uLYPbzHEl6bHer2biP5Z7d2UXROs9ucp7eEUY=</dsig:DigestValue>
+        <dsig:DigestValue>w7vnZqWsSLy+o/mdk+KYpZOYm5bsiKW71HT/+Pxkcxc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
