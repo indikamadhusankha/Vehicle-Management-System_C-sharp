@@ -115,11 +115,11 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(365, 9);
+            this.label5.Location = new System.Drawing.Point(416, 11);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(202, 31);
+            this.label5.Size = new System.Drawing.Size(135, 31);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Manage Users";
+            this.label5.Text = "Add User";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btn_userManage_submit
@@ -127,7 +127,7 @@
             this.btn_userManage_submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_userManage_submit.Location = new System.Drawing.Point(31, 476);
             this.btn_userManage_submit.Name = "btn_userManage_submit";
-            this.btn_userManage_submit.Size = new System.Drawing.Size(186, 30);
+            this.btn_userManage_submit.Size = new System.Drawing.Size(141, 30);
             this.btn_userManage_submit.TabIndex = 10;
             this.btn_userManage_submit.Text = "Add User";
             this.btn_userManage_submit.UseVisualStyleBackColor = true;
@@ -234,6 +234,7 @@
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.txtFirstName);
             this.Name = "ManageUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage User";
             this.Load += new System.EventHandler(this.ManageUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();

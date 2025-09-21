@@ -16,12 +16,14 @@ namespace Vehical_Management_System
         private string lastName;
         private string userRole;
 
-        public dashboard(string firstName, string lastName, string UserRole)
+        public dashboard(string firstName, string lastName, string userRole)
         {
             InitializeComponent();
+            lable_userInfo.Text = $"Welcome : {firstName} {lastName}";
+            
+            this.userRole = userRole;
+            lable_user_role.Text = $"User Role : {userRole}";
 
-            string fName = firstName;
-            string lName = lastName;
         }
 
         private void addVehicleBtn_Click(object sender, EventArgs e)
@@ -32,36 +34,28 @@ namespace Vehical_Management_System
 
         private void dashboard_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnManageUser_Click(object sender, EventArgs e)
         {
-            new ManageUser().Show();
+            
+            if (userRole == "Administrator")
+            {
+                new ManageUser().Show();
+            }
+            else
+            {
+                MessageBox.Show("You don't have permission to this option.",
+                                "Access Denied",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+            }
+
+
         }
 
 
-
-        private void LoadFormInPanel(Form frm)
-        {
-            // Clear previous controls
-           // panelContainer.Controls.Clear();
-
-            // Make the form a child of panel
-            frm.TopLevel = false;  // Form එක top-level නොවන විදිහට
-            frm.FormBorderStyle = FormBorderStyle.None; // Form border නැතුව
-            frm.Dock = DockStyle.Fill; // panel එක පුරා expand කරන්න
-
-            // Add form to panel
-          //  panelContainer.Controls.Add(frm);
-            frm.Show();
-        }
-
-        private void usermn_Click(object sender, EventArgs e)
-        {
-            Form myForm = new ManageUser();
-            LoadFormInPanel(myForm);
-        }
 
         
     }
