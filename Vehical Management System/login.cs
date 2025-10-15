@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Vehical_Management_System
@@ -48,18 +43,18 @@ namespace Vehical_Management_System
             string password = txtPassword.Text.Trim();
             string hashedPassword = ComputeSha256Hash(password);
 
-            string checkUserQuery = "SELECT TOP 1 firstName, lastName, user_role FROM Users WHERE user_name = @user_name AND hashed_password = @password";
-
-            using (SqlConnection conn = new SqlConnection(
-                "Data Source=(localdb)\\ProjectModels;Initial Catalog=vehicle_management;Integrated Security=True;TrustServerCertificate=True"))
+            string checkUserQuery = "SELECT firstName, lastName, user_role FROM Users WHERE user_name = @user_name AND hashed_password = @password";
+            string connectionString = "server=localhost;user id=root;password=;database=vehical";
+            using (MySqlConnection con = new MySqlConnection(connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand(checkUserQuery, conn))
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand(checkUserQuery, con))
                 {
-                    conn.Open();
+                    
                     cmd.Parameters.AddWithValue("@user_name", userName);
                     cmd.Parameters.AddWithValue("@password", hashedPassword);
 
-                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
                         {
