@@ -1,4 +1,6 @@
-﻿namespace Vehical_Management_System
+﻿using System;
+
+namespace Vehical_Management_System
 {
     partial class ManageUser
     {
@@ -242,6 +244,8 @@
             this.PerformLayout();
 
         }
+
+        
 
         #endregion
 

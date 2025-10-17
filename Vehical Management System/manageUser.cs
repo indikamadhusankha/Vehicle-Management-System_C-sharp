@@ -1,22 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
+using MySql.Data.MySqlClient;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Vehical_Management_System
 {
     public partial class ManageUser : Form
     {
+        private MySqlConnection con;
+        private string connectionString = "server=localhost;user id=root;password=;database=vehical_management";
         public ManageUser()
         {
             InitializeComponent();
+            con = new MySqlConnection(connectionString);
         }
 
               
@@ -71,16 +69,13 @@ namespace Vehical_Management_System
 
             string checkUserQuery = "SELECT COUNT(*) FROM Users WHERE user_name = @user_name";
 
-            using (SqlConnection conn = new SqlConnection(
-                "Data Source=(localdb)\\ProjectModels;Initial Catalog=vehicle_management;Integrated Security=True;TrustServerCertificate=True"))
-            {
-                using (SqlCommand cmd = new SqlCommand(checkUserQuery, conn))
-                {
-                    conn.Open();
+            con.Open();
+            using (MySqlCommand cmd = new MySqlCommand(checkUserQuery, con))
+                {                   
 
                     cmd.Parameters.AddWithValue("@user_name", txtUserName.Text.Trim());
 
-                    int userCount = (int)cmd.ExecuteScalar(); // returns number of rows with that username
+                    int userCount = Convert.ToInt32(cmd.ExecuteScalar()); // returns number of rows with that username
 
                     if (userCount > 0)
                     {
@@ -88,8 +83,9 @@ namespace Vehical_Management_System
                         txtUserName.Focus();
                         return false;
                     }
-                } // SqlCommand disposed
-            }
+                con.Close();
+            } // SqlCommand disposed
+            
 
 
             //check password empty
@@ -167,11 +163,10 @@ namespace Vehical_Management_System
                                "(firstName, lastName, contact, user_name, hashed_password, user_role) " +
                                "VALUES (@firstName, @lastName, @contact, @user_name, @hashed_password, @user_role)";
 
-                using (SqlConnection conn = new SqlConnection("Data Source=(localdb)\\ProjectModels;Initial Catalog=vehicle_management;Integrated Security=True;TrustServerCertificate=True"))
-                {
-                    using (SqlCommand sql = new SqlCommand(query, conn))
+                con.Open();
+                using (MySqlCommand sql = new MySqlCommand(query, con))
                     {
-                        conn.Open();
+                        
                         sql.Parameters.AddWithValue("@firstName", txtFirstName.Text);
                         sql.Parameters.AddWithValue("@lastName", txtLastName.Text);
                         sql.Parameters.AddWithValue("@contact", txtContactNo.Text);
@@ -181,6 +176,42 @@ namespace Vehical_Management_System
 
                         int rows = sql.ExecuteNonQuery();
                         MessageBox.Show(rows > 0 ? "User added successfully!" : "Insert failed!");
+
+
+                    
+
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+                Getdata();
+            }
+            
+        }
+
+
+        private void ManageUser_Load(object sender, EventArgs e)
+        {
+            Getdata();
+        }
+        private void Getdata()
+        {
+            try
+            {
+                con.Open();
+                using (MySqlCommand getDataSql = new MySqlCommand("SELECT * FROM users", con))
+                {
+                    using (MySqlDataAdapter sd = new MySqlDataAdapter(getDataSql))
+                    {
+                        DataTable dataTable = new DataTable();
+                        sd.Fill(dataTable);
+                        dataGridView2.DataSource = dataTable;
                     }
                 }
             }
@@ -188,31 +219,9 @@ namespace Vehical_Management_System
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-            
-        }
-
-        private void ManageUser_Load(object sender, EventArgs e)
-        {
-
-
+            finally
             {
-                Getdata();
-            }
-
-            void Getdata()
-            {
-
-                using (SqlConnection conn = new SqlConnection("Data Source=(localdb)\\ProjectModels;Initial Catalog=vehicle_management;Integrated Security=True;TrustServerCertificate=True"))
-                {
-                    SqlCommand getDataSql = new SqlCommand("select * from users", conn);
-                    conn.Open();
-                    SqlDataAdapter sd = new SqlDataAdapter(getDataSql);
-                    DataTable dataTable = new DataTable();
-                    sd.Fill(dataTable);
-                    dataGridView2.DataSource = dataTable;
-                }
-
-                    
+                con.Close();
             }
         }
     }

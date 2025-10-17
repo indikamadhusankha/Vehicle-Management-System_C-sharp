@@ -1,33 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 
 namespace Vehical_Management_System
 {
     public partial class AddVehicles : Form
     {
+        private MySqlConnection con;
+        private string connectionString = "server=localhost;user id=root;password=;database=vehical_management";
 
         private string userRole;
         public AddVehicles(string userRole)
         {
             InitializeComponent();
-            
+            con = new MySqlConnection(connectionString);
+
             if (userRole != "Administrator")
             {
                 btnDelete.Hide();
             }
         }
-
-        SqlConnection conn = new SqlConnection(
-            "Data Source=(localdb)\\ProjectModels;Initial Catalog=vehicle_management;Integrated Security=True;TrustServerCertificate=True"
-        );
+               
 
         private bool ValidateFields()
         {
@@ -38,18 +32,15 @@ namespace Vehical_Management_System
                 return false;
             }
 
-            string checkUserQuery = "SELECT COUNT(*) FROM vehicles WHERE txtRegNo = @RegNo";
+            string checkUserQuery = "SELECT COUNT(*) FROM vehicles WHERE registration_number = @RegNo";
 
-            using (SqlConnection conn = new SqlConnection(
-                "Data Source=(localdb)\\ProjectModels;Initial Catalog=vehicle_management;Integrated Security=True;TrustServerCertificate=True"))
-            {
-                using (SqlCommand cmd = new SqlCommand(checkUserQuery, conn))
-                {
-                    conn.Open();
+            con.Open();
+                using (var cmd = new MySqlCommand(checkUserQuery, con))
+                {                    
 
                     cmd.Parameters.AddWithValue("@RegNo", txtRegNo.Text.Trim());
 
-                    int userCount = (int)cmd.ExecuteScalar(); // returns number of rows with that username
+                    int userCount = Convert.ToInt32(cmd.ExecuteScalar()); // returns number of rows with that username
 
                     if (userCount > 0)
                     {
@@ -57,11 +48,9 @@ namespace Vehical_Management_System
                         txtRegNo.Focus();
                         return false;
                     }
-                } // SqlCommand disposed
-            }
-
-
-
+                con.Close();
+            } // SqlCommand disposed
+            
 
 
             if (txtVehType.Text.Trim() == "")
@@ -112,19 +101,19 @@ namespace Vehical_Management_System
 
         private void btn_add_vehicle_submit_Click(object sender, EventArgs e)
         {
-
+            
             if (!ValidateFields())
                 return; 
 
             try
             {
-                conn.Open();
+                con.Open();
 
                 string query = "INSERT INTO vehicles " +
-                               "(txtRegNo, txtVehType, txtBand,txtModel, txtYearManuf, txtEngineNo, txtChassisNo, txtFuelType) " +
+                               "(registration_number, VehType, brand,model, manufacture_year, engine_number, chassis_number, fuel_type) " +
                                "VALUES (@RegNo, @VehType, @Brand, @Model, @YearManuf, @EngineNo, @ChassisNo, @FuelType)";
 
-                using (SqlCommand sql = new SqlCommand(query, conn))
+                using (MySqlCommand sql = new MySqlCommand(query, con))
                 {
                     sql.Parameters.AddWithValue("@RegNo", txtRegNo.Text);
                     sql.Parameters.AddWithValue("@VehType", txtVehType.Text);
@@ -153,7 +142,7 @@ namespace Vehical_Management_System
             }
             finally
             {
-                conn.Close();
+                con.Close();
                 Getdata();
             }
         }
@@ -165,8 +154,9 @@ namespace Vehical_Management_System
 
         void Getdata()
         {
-            SqlCommand cmd = new SqlCommand("select * from vehicles", conn);
-            SqlDataAdapter sd = new SqlDataAdapter(cmd);
+            con.Open();
+            MySqlCommand cmd = new MySqlCommand("select * from vehicles", con);
+            MySqlDataAdapter sd = new MySqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             sd.Fill(dt);
             dataGridView1.DataSource = dt;
@@ -176,12 +166,13 @@ namespace Vehical_Management_System
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
+                
                 // get driver_id of selected row
                 string regNo = dataGridView1.SelectedRows[1].Cells["txtRegNo"].Value.ToString();
-                SqlCommand cmd = new SqlCommand(
-                      "DELETE FROM vehicles WHERE txtRegNo = @RegNo", conn);
+                MySqlCommand cmd = new MySqlCommand(
+                      "DELETE FROM vehicles WHERE registration_number = @RegNo", con);
                   
-                    conn.Open();
+                    con.Open();
                     cmd.Parameters.AddWithValue("@RegNo", regNo);
                     cmd.ExecuteNonQuery();
                 

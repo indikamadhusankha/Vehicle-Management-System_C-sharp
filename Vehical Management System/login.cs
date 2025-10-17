@@ -1,6 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
@@ -44,35 +43,41 @@ namespace Vehical_Management_System
             string hashedPassword = ComputeSha256Hash(password);
 
             string checkUserQuery = "SELECT firstName, lastName, user_role FROM Users WHERE user_name = @user_name AND hashed_password = @password";
-            string connectionString = "server=localhost;user id=root;password=;database=vehical";
-            using (MySqlConnection con = new MySqlConnection(connectionString))
+            string connectionString = "server=localhost;user id=root;password=;database=vehical_management";
+            try
             {
-                con.Open();
-                using (MySqlCommand cmd = new MySqlCommand(checkUserQuery, con))
+                using (MySqlConnection con = new MySqlConnection(connectionString))
                 {
-                    
-                    cmd.Parameters.AddWithValue("@user_name", userName);
-                    cmd.Parameters.AddWithValue("@password", hashedPassword);
-
-                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    con.Open();
+                    using (MySqlCommand cmd = new MySqlCommand(checkUserQuery, con))
                     {
-                        if (reader.Read())
-                        {
-                            string firstName = reader["firstName"].ToString();
-                            string lastName = reader["lastName"].ToString();
-                            string UserRole = reader["user_role"].ToString();
 
-                            // Pass role to Dashboard
-                            dashboard dashboardForm = new dashboard(firstName, lastName, UserRole);
-                            dashboardForm.Show();
-                            this.Hide();
-                        }
-                        else
+                        cmd.Parameters.AddWithValue("@user_name", userName);
+                        cmd.Parameters.AddWithValue("@password", hashedPassword);
+
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
                         {
-                            MessageBox.Show("Username or Password is invalid.");
+                            if (reader.Read())
+                            {
+                                string firstName = reader["firstName"].ToString();
+                                string lastName = reader["lastName"].ToString();
+                                string UserRole = reader["user_role"].ToString();
+
+                                // Pass role to Dashboard
+                                dashboard dashboardForm = new dashboard(firstName, lastName, UserRole);
+                                dashboardForm.Show();
+                                this.Hide();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Username or Password is invalid.");
+                            }
                         }
                     }
                 }
+            }catch (Exception ex)
+            {
+                MessageBox.Show("Error connecting to database: " + ex.Message);
             }
         }
 
