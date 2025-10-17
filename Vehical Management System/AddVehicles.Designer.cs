@@ -81,7 +81,7 @@
             // 
             this.lableBand.AutoSize = true;
             this.lableBand.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lableBand.Location = new System.Drawing.Point(42, 241);
+            this.lableBand.Location = new System.Drawing.Point(42, 202);
             this.lableBand.Name = "lableBand";
             this.lableBand.Size = new System.Drawing.Size(47, 20);
             this.lableBand.TabIndex = 2;
@@ -98,7 +98,7 @@
             // txtBand
             // 
             this.txtBand.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBand.Location = new System.Drawing.Point(213, 239);
+            this.txtBand.Location = new System.Drawing.Point(213, 200);
             this.txtBand.Name = "txtBand";
             this.txtBand.Size = new System.Drawing.Size(223, 29);
             this.txtBand.TabIndex = 4;
@@ -145,7 +145,7 @@
             // 
             this.lableModel.AutoSize = true;
             this.lableModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lableModel.Location = new System.Drawing.Point(42, 202);
+            this.lableModel.Location = new System.Drawing.Point(42, 241);
             this.lableModel.Name = "lableModel";
             this.lableModel.Size = new System.Drawing.Size(52, 20);
             this.lableModel.TabIndex = 7;
@@ -154,7 +154,7 @@
             // txtModel
             // 
             this.txtModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModel.Location = new System.Drawing.Point(213, 199);
+            this.txtModel.Location = new System.Drawing.Point(213, 238);
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(223, 29);
             this.txtModel.TabIndex = 8;

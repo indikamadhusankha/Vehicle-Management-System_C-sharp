@@ -222,14 +222,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Vehical Management System.exe" size="214056">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Vehical Management System.exe" size="215080">
       <assemblyIdentity name="Vehical Management System" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zkfuC9BNVJYmsGfaJa7lSXJwOyI+1CNXWXg747DNROc=</dsig:DigestValue>
+        <dsig:DigestValue>CYr22mimm95/k3A5cFn+D10BSa5Gpv78O7NKwfYb9OE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

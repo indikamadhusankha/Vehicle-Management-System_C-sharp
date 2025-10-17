@@ -9,12 +9,14 @@ namespace Vehical_Management_System
     {
         private MySqlConnection con;
         private string connectionString = "server=localhost;user id=root;password=;database=vehical_management";
-
-        private string userRole;
-        public AddVehicles(string userRole)
+        private string first_Name;
+        //private string userRole;
+        public AddVehicles(string userRole, string firstName)
         {
             InitializeComponent();
             con = new MySqlConnection(connectionString);
+            first_Name = firstName;
+         
 
             if (userRole != "Administrator")
             {
@@ -34,13 +36,15 @@ namespace Vehical_Management_System
 
             string checkUserQuery = "SELECT COUNT(*) FROM vehicles WHERE registration_number = @RegNo";
 
-            con.Open();
+
+            try
+            {
+
                 using (var cmd = new MySqlCommand(checkUserQuery, con))
-                {                    
-
+                {
+                con.Open(); // Open connection
                     cmd.Parameters.AddWithValue("@RegNo", txtRegNo.Text.Trim());
-
-                    int userCount = Convert.ToInt32(cmd.ExecuteScalar()); // returns number of rows with that username
+                    int userCount = Convert.ToInt32(cmd.ExecuteScalar());
 
                     if (userCount > 0)
                     {
@@ -48,9 +52,19 @@ namespace Vehical_Management_System
                         txtRegNo.Focus();
                         return false;
                     }
-                con.Close();
-            } // SqlCommand disposed
-            
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error while checking registration number: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                    con.Close(); // connection closes
+            }
+
 
 
             if (txtVehType.Text.Trim() == "")
@@ -110,8 +124,8 @@ namespace Vehical_Management_System
                 con.Open();
 
                 string query = "INSERT INTO vehicles " +
-                               "(registration_number, VehType, brand,model, manufacture_year, engine_number, chassis_number, fuel_type) " +
-                               "VALUES (@RegNo, @VehType, @Brand, @Model, @YearManuf, @EngineNo, @ChassisNo, @FuelType)";
+                               "(registration_number, VehType, brand,model, manufacture_year, engine_number, chassis_number, fuel_type, added_by) " +
+                               "VALUES (@RegNo, @VehType, @Brand, @Model, @YearManuf, @EngineNo, @ChassisNo, @FuelType, @added_by)";
 
                 using (MySqlCommand sql = new MySqlCommand(query, con))
                 {
@@ -123,12 +137,21 @@ namespace Vehical_Management_System
                     sql.Parameters.AddWithValue("@EngineNo", txtEngineNo.Text);
                     sql.Parameters.AddWithValue("@ChassisNo", txtChassisNo.Text);
                     sql.Parameters.AddWithValue("@FuelType", txtFuelType.Text);
+                    sql.Parameters.AddWithValue("@added_by", first_Name);
 
                     int rows = sql.ExecuteNonQuery();
 
                     if (rows > 0)
                     {
                         MessageBox.Show("Vehicle added successfully!");
+
+                        txtRegNo.Clear();
+                        txtBand.Clear();
+                        txtModel.Clear();
+                        txtEngineNo.Clear();
+                        txtChassisNo.Clear();                        
+                        txtVehType.SelectedIndex = -1;
+                        txtFuelType.SelectedIndex = -1;
                     }
                     else
                     {
@@ -142,7 +165,8 @@ namespace Vehical_Management_System
             }
             finally
             {
-                con.Close();
+                if (con.State == ConnectionState.Open)
+                    con.Close(); // connection closes
                 Getdata();
             }
         }
@@ -154,33 +178,65 @@ namespace Vehical_Management_System
 
         void Getdata()
         {
-            con.Open();
-            MySqlCommand cmd = new MySqlCommand("select * from vehicles", con);
-            MySqlDataAdapter sd = new MySqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            sd.Fill(dt);
-            dataGridView1.DataSource = dt;
+            try
+            {
+                if (con.State != ConnectionState.Open)
+                    con.Open();
+
+                using (MySqlCommand cmd = new MySqlCommand(
+                    "SELECT registration_number, VehType, brand, owner_name, owner_contact, added_by, date_added FROM vehicles", con))
+                {
+                    using (MySqlDataAdapter sd = new MySqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        sd.Fill(dt);
+                        dataGridView1.DataSource = dt;
+                    }
+                }
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                    con.Close();
+            }
         }
 
-       private void btnDelete_Click(object sender, EventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                
-                // get driver_id of selected row
-                string regNo = dataGridView1.SelectedRows[1].Cells["txtRegNo"].Value.ToString();
-                MySqlCommand cmd = new MySqlCommand(
-                      "DELETE FROM vehicles WHERE registration_number = @RegNo", con);
-                  
-                    con.Open();
-                    cmd.Parameters.AddWithValue("@RegNo", regNo);
-                    cmd.ExecuteNonQuery();
-                
+                string regNo = dataGridView1.SelectedRows[0].Cells["registration_number"].Value.ToString();
 
-                MessageBox.Show("Vehicle deleted successfully.");
+                DialogResult confirm = MessageBox.Show("Are you sure you want to delete this vehicle?",
+                                                       "Confirm Delete", MessageBoxButtons.YesNo);
 
-                // reload grid
-                Getdata();
+                if (confirm == DialogResult.Yes)
+                {
+                    try
+                    {
+                        if (con.State != ConnectionState.Open)
+                            con.Open();
+
+                        using (MySqlCommand cmd = new MySqlCommand(
+                            "DELETE FROM vehicles WHERE registration_number = @RegNo", con))
+                        {
+                            cmd.Parameters.AddWithValue("@RegNo", regNo);
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        MessageBox.Show("Vehicle deleted successfully.");
+                        Getdata();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error deleting record: " + ex.Message);
+                    }
+                    finally
+                    {
+                        if (con.State == ConnectionState.Open)
+                            con.Close();
+                    }
+                }
             }
             else
             {
@@ -188,7 +244,7 @@ namespace Vehical_Management_System
             }
         }
 
-        
+
     }
 
 }

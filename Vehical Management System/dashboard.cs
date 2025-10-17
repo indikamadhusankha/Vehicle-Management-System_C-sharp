@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Vehical_Management_System
@@ -13,7 +6,7 @@ namespace Vehical_Management_System
     public partial class dashboard : Form
     {
         private string firstName;
-        private string lastName;
+       // private string lastName;
         private string userRole;
 
         public dashboard(string firstName, string lastName, string userRole)
@@ -22,13 +15,14 @@ namespace Vehical_Management_System
             lable_userInfo.Text = $"Welcome : {firstName} {lastName}";
             
             this.userRole = userRole;
+            this.firstName = firstName;
             lable_user_role.Text = $"User Role : {userRole}";
 
         }
 
         private void addVehicleBtn_Click(object sender, EventArgs e)
         {
-            new AddVehicles(userRole).Show();
+            new AddVehicles(userRole, firstName).Show();
             
         }
 
