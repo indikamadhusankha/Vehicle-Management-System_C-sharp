@@ -126,6 +126,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addDrivers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addDrivers.Designer.cs">
+      <DependentUpon>addDrivers.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConnectionManager.cs" />
     <Compile Include="manageUser.cs">
       <SubType>Form</SubType>
@@ -158,6 +164,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>vehicle_managementDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="addDrivers.resx">
+      <DependentUpon>addDrivers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddVehicles.resx">
       <DependentUpon>AddVehicles.cs</DependentUpon>
     </EmbeddedResource>

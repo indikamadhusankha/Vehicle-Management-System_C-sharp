@@ -29,6 +29,7 @@ namespace Vehical_Management_System
         private void dashboard_Load(object sender, EventArgs e)
         {
             
+
         }
 
         private void btnManageUser_Click(object sender, EventArgs e)
@@ -49,8 +50,30 @@ namespace Vehical_Management_System
 
         }
 
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            // Confirm logout
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to log out?",
+                "Confirm Logout",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
 
+            if (result == DialogResult.Yes)
+            {
+                
+                this.Hide();                
+                login login = new login();
+                login.Show();
+                
+            }
+        }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            addDrivers addDrivers = new addDrivers();
+            addDrivers.Show();
+        }
     }
 }

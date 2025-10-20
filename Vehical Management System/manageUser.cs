@@ -15,9 +15,7 @@ namespace Vehical_Management_System
         {
             InitializeComponent();
             con = ConnectionManager.GetConnection();
-        }
-
-              
+        }              
 
         private bool ValidateFields()
         {

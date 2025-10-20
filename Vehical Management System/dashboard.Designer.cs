@@ -50,6 +50,13 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_logout = new System.Windows.Forms.Button();
+            this.vehicle_managementDataSet = new Vehical_Management_System.vehicle_managementDataSet();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersTableAdapter = new Vehical_Management_System.vehicle_managementDataSetTableAdapters.usersTableAdapter();
+            this.tableAdapterManager = new Vehical_Management_System.vehicle_managementDataSetTableAdapters.TableAdapterManager();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button4 = new System.Windows.Forms.Button();
             this.operatorPanel_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.ManageUserPanel.SuspendLayout();
@@ -61,6 +68,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.reportsPannel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vehicle_managementDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // operatorPanel_1
@@ -69,7 +79,7 @@
             this.operatorPanel_1.Controls.Add(this.addVehicleBtn);
             this.operatorPanel_1.Controls.Add(this.pictureBox1);
             this.operatorPanel_1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.operatorPanel_1.Location = new System.Drawing.Point(133, 155);
+            this.operatorPanel_1.Location = new System.Drawing.Point(3, 3);
             this.operatorPanel_1.Name = "operatorPanel_1";
             this.operatorPanel_1.Size = new System.Drawing.Size(132, 85);
             this.operatorPanel_1.TabIndex = 0;
@@ -88,7 +98,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(13, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(18, 6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(104, 45);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -111,7 +121,7 @@
             this.ManageUserPanel.BackColor = System.Drawing.Color.PowderBlue;
             this.ManageUserPanel.Controls.Add(this.btnManageUser);
             this.ManageUserPanel.Controls.Add(this.pictureBox2);
-            this.ManageUserPanel.Location = new System.Drawing.Point(287, 155);
+            this.ManageUserPanel.Location = new System.Drawing.Point(141, 3);
             this.ManageUserPanel.Name = "ManageUserPanel";
             this.ManageUserPanel.Size = new System.Drawing.Size(140, 85);
             this.ManageUserPanel.TabIndex = 2;
@@ -169,7 +179,7 @@
             this.addDriversPannel.BackColor = System.Drawing.Color.PowderBlue;
             this.addDriversPannel.Controls.Add(this.pictureBox4);
             this.addDriversPannel.Controls.Add(this.button1);
-            this.addDriversPannel.Location = new System.Drawing.Point(448, 155);
+            this.addDriversPannel.Location = new System.Drawing.Point(287, 3);
             this.addDriversPannel.Name = "addDriversPannel";
             this.addDriversPannel.Size = new System.Drawing.Size(146, 85);
             this.addDriversPannel.TabIndex = 8;
@@ -194,13 +204,14 @@
             this.button1.TabIndex = 9;
             this.button1.Text = "Add Drivers";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MaintainPannel
             // 
             this.MaintainPannel.BackColor = System.Drawing.Color.PowderBlue;
             this.MaintainPannel.Controls.Add(this.pictureBox5);
             this.MaintainPannel.Controls.Add(this.button2);
-            this.MaintainPannel.Location = new System.Drawing.Point(613, 155);
+            this.MaintainPannel.Location = new System.Drawing.Point(439, 3);
             this.MaintainPannel.Name = "MaintainPannel";
             this.MaintainPannel.Size = new System.Drawing.Size(146, 85);
             this.MaintainPannel.TabIndex = 10;
@@ -229,9 +240,10 @@
             // reportsPannel
             // 
             this.reportsPannel.BackColor = System.Drawing.Color.PowderBlue;
+            this.reportsPannel.Controls.Add(this.button4);
             this.reportsPannel.Controls.Add(this.pictureBox6);
             this.reportsPannel.Controls.Add(this.button3);
-            this.reportsPannel.Location = new System.Drawing.Point(776, 155);
+            this.reportsPannel.Location = new System.Drawing.Point(591, 3);
             this.reportsPannel.Name = "reportsPannel";
             this.reportsPannel.Size = new System.Drawing.Size(146, 85);
             this.reportsPannel.TabIndex = 11;
@@ -250,7 +262,7 @@
             // 
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(0, 55);
+            this.button3.Location = new System.Drawing.Point(743, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(146, 30);
             this.button3.TabIndex = 9;
@@ -266,21 +278,83 @@
             this.panel1.Size = new System.Drawing.Size(122, 595);
             this.panel1.TabIndex = 12;
             // 
+            // btn_logout
+            // 
+            this.btn_logout.BackColor = System.Drawing.Color.Crimson;
+            this.btn_logout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_logout.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_logout.FlatAppearance.BorderSize = 0;
+            this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_logout.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_logout.Location = new System.Drawing.Point(135, 139);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(115, 29);
+            this.btn_logout.TabIndex = 13;
+            this.btn_logout.Text = "Log Out";
+            this.btn_logout.UseVisualStyleBackColor = false;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
+            // 
+            // vehicle_managementDataSet
+            // 
+            this.vehicle_managementDataSet.DataSetName = "vehicle_managementDataSet";
+            this.vehicle_managementDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "users";
+            this.usersBindingSource.DataSource = this.vehicle_managementDataSet;
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.booksTableAdapter = null;
+            this.tableAdapterManager.driversTableAdapter = null;
+            this.tableAdapterManager.maintainsTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Vehical_Management_System.vehicle_managementDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
+            this.tableAdapterManager.vehiclesTableAdapter = null;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoSize = true;
+            this.flowLayoutPanel1.Controls.Add(this.operatorPanel_1);
+            this.flowLayoutPanel1.Controls.Add(this.ManageUserPanel);
+            this.flowLayoutPanel1.Controls.Add(this.addDriversPannel);
+            this.flowLayoutPanel1.Controls.Add(this.MaintainPannel);
+            this.flowLayoutPanel1.Controls.Add(this.reportsPannel);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(135, 198);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(968, 377);
+            this.flowLayoutPanel1.TabIndex = 14;
+            // 
+            // button4
+            // 
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(0, 54);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(146, 30);
+            this.button4.TabIndex = 14;
+            this.button4.Text = "Reports";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(1130, 595);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.reportsPannel);
-            this.Controls.Add(this.MaintainPannel);
-            this.Controls.Add(this.addDriversPannel);
             this.Controls.Add(this.lable_user_role);
             this.Controls.Add(this.lable_userInfo);
-            this.Controls.Add(this.ManageUserPanel);
             this.Controls.Add(this.dashbosrd_title);
-            this.Controls.Add(this.operatorPanel_1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -298,6 +372,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.reportsPannel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vehicle_managementDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,5 +402,12 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Panel panel1;
+        private vehicle_managementDataSet vehicle_managementDataSet;
+        private System.Windows.Forms.BindingSource usersBindingSource;
+        private vehicle_managementDataSetTableAdapters.usersTableAdapter usersTableAdapter;
+        private vehicle_managementDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.Button btn_logout;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button button4;
     }
 }
