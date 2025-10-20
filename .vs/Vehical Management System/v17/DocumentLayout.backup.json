@@ -3,16 +3,19 @@
   "WorkspaceRootPath": "E:\\BIT\\Sem_02\\06 ICT Project - ITE1943\\CA_03\\Vehicle-Management-System_C-sharp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|e:\\bit\\sem_02\\06 ict project - ite1943\\ca_03\\vehicle-management-system_c-sharp\\vehical management system\\addvehicles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|solutionrelative:vehical management system\\addvehicles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|e:\\bit\\sem_02\\06 ict project - ite1943\\ca_03\\vehicle-management-system_c-sharp\\vehical management system\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|solutionrelative:vehical management system\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|e:\\bit\\sem_02\\06 ict project - ite1943\\ca_03\\vehicle-management-system_c-sharp\\vehical management system\\addvehicles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|solutionrelative:vehical management system\\addvehicles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|e:\\bit\\sem_02\\06 ict project - ite1943\\ca_03\\vehicle-management-system_c-sharp\\vehical management system\\connectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|solutionrelative:vehical management system\\connectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|e:\\bit\\sem_02\\06 ict project - ite1943\\ca_03\\vehicle-management-system_c-sharp\\vehical management system\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|solutionrelative:vehical management system\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__ProjectModels/vehicle_management/True/SqlTable/dbo.vehicles.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|e:\\bit\\sem_02\\06 ict project - ite1943\\ca_03\\vehicle-management-system_c-sharp\\vehical management system\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|solutionrelative:vehical management system\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +25,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,40 +33,51 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AddVehicles.cs [Design]",
-              "DocumentMoniker": "E:\\BIT\\Sem_02\\06 ICT Project - ITE1943\\CA_03\\Vehicle-Management-System_C-sharp\\Vehical Management System\\AddVehicles.cs",
-              "RelativeDocumentMoniker": "Vehical Management System\\AddVehicles.cs",
-              "ToolTip": "E:\\BIT\\Sem_02\\06 ICT Project - ITE1943\\CA_03\\Vehicle-Management-System_C-sharp\\Vehical Management System\\AddVehicles.cs [Design]",
-              "RelativeToolTip": "Vehical Management System\\AddVehicles.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-17T13:25:12.784Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "dashboard.cs",
-              "DocumentMoniker": "E:\\BIT\\Sem_02\\06 ICT Project - ITE1943\\CA_03\\Vehicle-Management-System_C-sharp\\Vehical Management System\\dashboard.cs",
-              "RelativeDocumentMoniker": "Vehical Management System\\dashboard.cs",
-              "ToolTip": "E:\\BIT\\Sem_02\\06 ICT Project - ITE1943\\CA_03\\Vehicle-Management-System_C-sharp\\Vehical Management System\\dashboard.cs",
-              "RelativeToolTip": "Vehical Management System\\dashboard.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-17T12:52:34.793Z",
+              "DocumentIndex": 0,
+              "Title": "App.config",
+              "DocumentMoniker": "E:\\BIT\\Sem_02\\06 ICT Project - ITE1943\\CA_03\\Vehicle-Management-System_C-sharp\\Vehical Management System\\App.config",
+              "RelativeDocumentMoniker": "Vehical Management System\\App.config",
+              "ToolTip": "E:\\BIT\\Sem_02\\06 ICT Project - ITE1943\\CA_03\\Vehicle-Management-System_C-sharp\\Vehical Management System\\App.config",
+              "RelativeToolTip": "Vehical Management System\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAACGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-10-20T09:51:21.297Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AddVehicles.cs",
-              "DocumentMoniker": "E:\\BIT\\Sem_02\\06 ICT Project - ITE1943\\CA_03\\Vehicle-Management-System_C-sharp\\Vehical Management System\\AddVehicles.cs",
-              "RelativeDocumentMoniker": "Vehical Management System\\AddVehicles.cs",
-              "ToolTip": "E:\\BIT\\Sem_02\\06 ICT Project - ITE1943\\CA_03\\Vehicle-Management-System_C-sharp\\Vehical Management System\\AddVehicles.cs",
-              "RelativeToolTip": "Vehical Management System\\AddVehicles.cs",
-              "ViewState": "AgIAAHoAAAAAAAAAAAAwwIwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ConnectionManager.cs",
+              "DocumentMoniker": "E:\\BIT\\Sem_02\\06 ICT Project - ITE1943\\CA_03\\Vehicle-Management-System_C-sharp\\Vehical Management System\\ConnectionManager.cs",
+              "RelativeDocumentMoniker": "Vehical Management System\\ConnectionManager.cs",
+              "ToolTip": "E:\\BIT\\Sem_02\\06 ICT Project - ITE1943\\CA_03\\Vehicle-Management-System_C-sharp\\Vehical Management System\\ConnectionManager.cs",
+              "RelativeToolTip": "Vehical Management System\\ConnectionManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-17T12:42:29.42Z",
+              "WhenOpened": "2025-10-20T09:26:57.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "dbo.vehicles [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__ProjectModels/vehicle_management/True/SqlTable/dbo.vehicles.sql",
+              "ToolTip": "dbo.vehicles [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-10-20T09:02:42.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "login.cs",
+              "DocumentMoniker": "E:\\BIT\\Sem_02\\06 ICT Project - ITE1943\\CA_03\\Vehicle-Management-System_C-sharp\\Vehical Management System\\login.cs",
+              "RelativeDocumentMoniker": "Vehical Management System\\login.cs",
+              "ToolTip": "E:\\BIT\\Sem_02\\06 ICT Project - ITE1943\\CA_03\\Vehicle-Management-System_C-sharp\\Vehical Management System\\login.cs",
+              "RelativeToolTip": "Vehical Management System\\login.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAwwDIAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T08:47:17.802Z",
               "EditorCaption": ""
             }
           ]

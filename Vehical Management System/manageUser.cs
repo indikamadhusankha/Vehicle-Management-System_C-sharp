@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
-using MySql.Data.MySqlClient;
+//using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
@@ -9,12 +10,11 @@ namespace Vehical_Management_System
 {
     public partial class ManageUser : Form
     {
-        private MySqlConnection con;
-        private string connectionString = "server=localhost;user id=root;password=;database=vehical_management";
+        SqlConnection con;
         public ManageUser()
         {
             InitializeComponent();
-            con = new MySqlConnection(connectionString);
+            con = ConnectionManager.GetConnection();
         }
 
               
@@ -67,15 +67,17 @@ namespace Vehical_Management_System
             }
 
 
-            string checkUserQuery = "SELECT COUNT(*) FROM Users WHERE user_name = @user_name";
-
-            con.Open();
-            using (MySqlCommand cmd = new MySqlCommand(checkUserQuery, con))
-                {                   
+            string checkUserQuery = "SELECT COUNT(*) FROM users WHERE user_name = @user_name";
+            using (con = ConnectionManager.GetConnection())
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand(checkUserQuery, con))
+                {
 
                     cmd.Parameters.AddWithValue("@user_name", txtUserName.Text.Trim());
 
-                    int userCount = Convert.ToInt32(cmd.ExecuteScalar()); // returns number of rows with that username
+                    object result = cmd.ExecuteScalar();
+                    int userCount = (result != null) ? Convert.ToInt32(result) : 0;
 
                     if (userCount > 0)
                     {
@@ -83,8 +85,9 @@ namespace Vehical_Management_System
                         txtUserName.Focus();
                         return false;
                     }
-                con.Close();
-            } // SqlCommand disposed
+                    con.Close();
+                } // SqlCommand disposed
+            }
             
 
 
@@ -154,19 +157,21 @@ namespace Vehical_Management_System
         {
             if (!ValidateFields())
                 return;
-
-            try
+            using (con = ConnectionManager.GetConnection())
             {
-                string hashedPassword = ComputeSha256Hash(txtPassword.Text.Trim());
 
-                string query = "INSERT INTO users " +
-                               "(firstName, lastName, contact, user_name, hashed_password, user_role) " +
-                               "VALUES (@firstName, @lastName, @contact, @user_name, @hashed_password, @user_role)";
+                try
+                {
+                    string hashedPassword = ComputeSha256Hash(txtPassword.Text.Trim());
 
-                con.Open();
-                using (MySqlCommand sql = new MySqlCommand(query, con))
+                    string query = "INSERT INTO Users " +
+                                   "(firstName, lastName, contact, user_name, hashed_password, user_role) " +
+                                   "VALUES (@firstName, @lastName, @contact, @user_name, @hashed_password, @user_role)";
+
+                    con.Open();
+                    using (SqlCommand sql = new SqlCommand(query, con))
                     {
-                        
+
                         sql.Parameters.AddWithValue("@firstName", txtFirstName.Text);
                         sql.Parameters.AddWithValue("@lastName", txtLastName.Text);
                         sql.Parameters.AddWithValue("@contact", txtContactNo.Text);
@@ -178,19 +183,20 @@ namespace Vehical_Management_System
                         MessageBox.Show(rows > 0 ? "User added successfully!" : "Insert failed!");
 
 
-                    
+
+
+                    }
 
                 }
-                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                con.Close();
-                Getdata();
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+                finally
+                {
+                    con.Close();
+                    Getdata();
+                }
             }
             
         }
@@ -200,28 +206,34 @@ namespace Vehical_Management_System
         {
             Getdata();
         }
+
+
+
         private void Getdata()
         {
-            try
+            using (con = ConnectionManager.GetConnection())
             {
-                con.Open();
-                using (MySqlCommand getDataSql = new MySqlCommand("SELECT * FROM users", con))
+                try
                 {
-                    using (MySqlDataAdapter sd = new MySqlDataAdapter(getDataSql))
+                    con.Open();
+                    using (SqlCommand getDataSql = new SqlCommand("SELECT * FROM users", con))
                     {
-                        DataTable dataTable = new DataTable();
-                        sd.Fill(dataTable);
-                        dataGridView2.DataSource = dataTable;
+                        using (SqlDataAdapter sd = new SqlDataAdapter(getDataSql))
+                        {
+                            DataTable dataTable = new DataTable();
+                            sd.Fill(dataTable);
+                            dataGridView2.DataSource = dataTable;
+                        }
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                con.Close();
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
             }
         }
     }

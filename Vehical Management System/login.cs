@@ -1,13 +1,15 @@
-﻿using MySql.Data.MySqlClient;
+﻿//using MySql.Data.MySqlClient;
 using System;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Vehical_Management_System
 {
     public partial class login : Form
     {
+        SqlConnection con;
         public login()
         {
             InitializeComponent();
@@ -42,20 +44,20 @@ namespace Vehical_Management_System
             string password = txtPassword.Text.Trim();
             string hashedPassword = ComputeSha256Hash(password);
 
-            string checkUserQuery = "SELECT firstName, lastName, user_role FROM Users WHERE user_name = @user_name AND hashed_password = @password";
-            string connectionString = "server=localhost;user id=root;password=;database=vehical_management";
+            string checkUserQuery = "SELECT firstName, lastName, user_role FROM users WHERE user_name = @user_name AND hashed_password = @password";
+            
             try
             {
-                using (MySqlConnection con = new MySqlConnection(connectionString))
+                using (con = ConnectionManager.GetConnection())
                 {
                     con.Open();
-                    using (MySqlCommand cmd = new MySqlCommand(checkUserQuery, con))
+                    using (SqlCommand cmd = new SqlCommand(checkUserQuery, con))
                     {
 
                         cmd.Parameters.AddWithValue("@user_name", userName);
                         cmd.Parameters.AddWithValue("@password", hashedPassword);
 
-                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
                             if (reader.Read())
                             {

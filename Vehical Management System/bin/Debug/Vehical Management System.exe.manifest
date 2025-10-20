@@ -222,14 +222,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Vehical Management System.exe" size="215080">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Vehical Management System.exe" size="299048">
       <assemblyIdentity name="Vehical Management System" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>CYr22mimm95/k3A5cFn+D10BSa5Gpv78O7NKwfYb9OE=</dsig:DigestValue>
+        <dsig:DigestValue>XCaCX7CXi+ohPY22iDWm3tLVhGcMSJt/u/ng0CmtkQk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -245,13 +245,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Vehical Management System.exe.config" size="1183">
+  <file name="Vehical Management System.exe.config" size="1130">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>HlT6BAX68AT6BKd2Zs+yg423/zR+8Os6xWdo7PcNi6A=</dsig:DigestValue>
+      <dsig:DigestValue>mKxbNY0NQy3d6Q7ERhKDfmV2EYRsnLKa/Jhs71W+/hw=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
