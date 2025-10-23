@@ -93,7 +93,7 @@
             this.txtRegNo.Location = new System.Drawing.Point(213, 120);
             this.txtRegNo.Name = "txtRegNo";
             this.txtRegNo.Size = new System.Drawing.Size(223, 26);
-            this.txtRegNo.TabIndex = 3;
+            this.txtRegNo.TabIndex = 1;
             // 
             // txtBand
             // 
@@ -101,7 +101,7 @@
             this.txtBand.Location = new System.Drawing.Point(213, 200);
             this.txtBand.Name = "txtBand";
             this.txtBand.Size = new System.Drawing.Size(223, 26);
-            this.txtBand.TabIndex = 4;
+            this.txtBand.TabIndex = 3;
             // 
             // lableVehiclaType
             // 
@@ -139,7 +139,7 @@
             this.txtVehType.Location = new System.Drawing.Point(213, 160);
             this.txtVehType.Name = "txtVehType";
             this.txtVehType.Size = new System.Drawing.Size(223, 28);
-            this.txtVehType.TabIndex = 6;
+            this.txtVehType.TabIndex = 2;
             // 
             // lableModel
             // 
@@ -157,7 +157,7 @@
             this.txtModel.Location = new System.Drawing.Point(213, 238);
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(223, 26);
-            this.txtModel.TabIndex = 8;
+            this.txtModel.TabIndex = 4;
             // 
             // lableYearManu
             // 
@@ -173,6 +173,7 @@
             // 
             this.txtFuelType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFuelType.FormattingEnabled = true;
+            this.txtFuelType.ItemHeight = 20;
             this.txtFuelType.Items.AddRange(new object[] {
             "Petrol",
             "Diesel",
@@ -181,7 +182,7 @@
             this.txtFuelType.Location = new System.Drawing.Point(213, 396);
             this.txtFuelType.Name = "txtFuelType";
             this.txtFuelType.Size = new System.Drawing.Size(223, 28);
-            this.txtFuelType.TabIndex = 11;
+            this.txtFuelType.TabIndex = 8;
             // 
             // lableFuelType
             // 
@@ -199,7 +200,7 @@
             this.txtEngineNo.Location = new System.Drawing.Point(213, 316);
             this.txtEngineNo.Name = "txtEngineNo";
             this.txtEngineNo.Size = new System.Drawing.Size(223, 26);
-            this.txtEngineNo.TabIndex = 13;
+            this.txtEngineNo.TabIndex = 6;
             // 
             // txtChassisNo
             // 
@@ -207,7 +208,7 @@
             this.txtChassisNo.Location = new System.Drawing.Point(213, 356);
             this.txtChassisNo.Name = "txtChassisNo";
             this.txtChassisNo.Size = new System.Drawing.Size(223, 26);
-            this.txtChassisNo.TabIndex = 14;
+            this.txtChassisNo.TabIndex = 7;
             // 
             // lableEngineNumber
             // 
@@ -238,7 +239,7 @@
             this.btn_add_vehicle_submit.Location = new System.Drawing.Point(213, 432);
             this.btn_add_vehicle_submit.Name = "btn_add_vehicle_submit";
             this.btn_add_vehicle_submit.Size = new System.Drawing.Size(142, 36);
-            this.btn_add_vehicle_submit.TabIndex = 17;
+            this.btn_add_vehicle_submit.TabIndex = 9;
             this.btn_add_vehicle_submit.Text = "Add Vehicle";
             this.btn_add_vehicle_submit.UseVisualStyleBackColor = false;
             this.btn_add_vehicle_submit.Click += new System.EventHandler(this.btn_add_vehicle_submit_Click);
@@ -250,7 +251,7 @@
             this.txtYearManuf.Location = new System.Drawing.Point(213, 279);
             this.txtYearManuf.Name = "txtYearManuf";
             this.txtYearManuf.Size = new System.Drawing.Size(223, 26);
-            this.txtYearManuf.TabIndex = 18;
+            this.txtYearManuf.TabIndex = 5;
             // 
             // vehicle_managementDataSet
             // 
@@ -279,7 +280,7 @@
             this.btnDelete.Location = new System.Drawing.Point(952, 479);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(142, 36);
-            this.btnDelete.TabIndex = 20;
+            this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);

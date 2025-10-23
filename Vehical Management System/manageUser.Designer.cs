@@ -56,7 +56,7 @@ namespace Vehical_Management_System
             this.txtFirstName.Location = new System.Drawing.Point(29, 72);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(248, 26);
-            this.txtFirstName.TabIndex = 0;
+            this.txtFirstName.TabIndex = 1;
             // 
             // txtLastName
             // 
@@ -64,7 +64,7 @@ namespace Vehical_Management_System
             this.txtLastName.Location = new System.Drawing.Point(29, 130);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(248, 26);
-            this.txtLastName.TabIndex = 1;
+            this.txtLastName.TabIndex = 2;
             // 
             // txtContactNo
             // 
@@ -72,7 +72,7 @@ namespace Vehical_Management_System
             this.txtContactNo.Location = new System.Drawing.Point(29, 189);
             this.txtContactNo.Name = "txtContactNo";
             this.txtContactNo.Size = new System.Drawing.Size(248, 26);
-            this.txtContactNo.TabIndex = 2;
+            this.txtContactNo.TabIndex = 3;
             // 
             // label1
             // 
@@ -130,7 +130,7 @@ namespace Vehical_Management_System
             this.btn_userManage_submit.Location = new System.Drawing.Point(31, 476);
             this.btn_userManage_submit.Name = "btn_userManage_submit";
             this.btn_userManage_submit.Size = new System.Drawing.Size(141, 30);
-            this.btn_userManage_submit.TabIndex = 10;
+            this.btn_userManage_submit.TabIndex = 8;
             this.btn_userManage_submit.Text = "Add User";
             this.btn_userManage_submit.UseVisualStyleBackColor = true;
             this.btn_userManage_submit.Click += new System.EventHandler(this.btn_userManage_submit_Click);
@@ -141,7 +141,7 @@ namespace Vehical_Management_System
             this.txtPassword.Location = new System.Drawing.Point(29, 305);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(248, 26);
-            this.txtPassword.TabIndex = 11;
+            this.txtPassword.TabIndex = 5;
             // 
             // txtPasswordConfirm
             // 
@@ -149,7 +149,7 @@ namespace Vehical_Management_System
             this.txtPasswordConfirm.Location = new System.Drawing.Point(29, 369);
             this.txtPasswordConfirm.Name = "txtPasswordConfirm";
             this.txtPasswordConfirm.Size = new System.Drawing.Size(248, 26);
-            this.txtPasswordConfirm.TabIndex = 12;
+            this.txtPasswordConfirm.TabIndex = 6;
             // 
             // label6
             // 
@@ -193,7 +193,7 @@ namespace Vehical_Management_System
             this.txtUserRole.Location = new System.Drawing.Point(29, 431);
             this.txtUserRole.Name = "txtUserRole";
             this.txtUserRole.Size = new System.Drawing.Size(248, 28);
-            this.txtUserRole.TabIndex = 16;
+            this.txtUserRole.TabIndex = 7;
             // 
             // label8
             // 
@@ -211,7 +211,7 @@ namespace Vehical_Management_System
             this.txtUserName.Location = new System.Drawing.Point(29, 248);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(248, 26);
-            this.txtUserName.TabIndex = 17;
+            this.txtUserName.TabIndex = 4;
             // 
             // ManageUser
             // 

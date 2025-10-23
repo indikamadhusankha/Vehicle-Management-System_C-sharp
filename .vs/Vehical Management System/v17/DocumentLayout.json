@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "E:\\BIT\\Sem_02\\06 ICT Project - ITE1943\\CA_03\\Vehicle-Management-System_C-sharp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|e:\\bit\\sem_02\\06 ict project - ite1943\\ca_03\\vehicle-management-system_c-sharp\\vehical management system\\manageuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|solutionrelative:vehical management system\\manageuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|e:\\bit\\sem_02\\06 ict project - ite1943\\ca_03\\vehicle-management-system_c-sharp\\vehical management system\\addvehicles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2096D8A3-DF3C-4232-B42E-F0B1770CFFD9}|Vehical Management System\\Vehical Management System.csproj|solutionrelative:vehical management system\\addvehicles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -31,6 +35,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "manageUser.cs [Design]",
+              "DocumentMoniker": "E:\\BIT\\Sem_02\\06 ICT Project - ITE1943\\CA_03\\Vehicle-Management-System_C-sharp\\Vehical Management System\\manageUser.cs",
+              "RelativeDocumentMoniker": "Vehical Management System\\manageUser.cs",
+              "ToolTip": "E:\\BIT\\Sem_02\\06 ICT Project - ITE1943\\CA_03\\Vehicle-Management-System_C-sharp\\Vehical Management System\\manageUser.cs [Design]",
+              "RelativeToolTip": "Vehical Management System\\manageUser.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T18:38:58.056Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "AddVehicles.cs [Design]",
               "DocumentMoniker": "E:\\BIT\\Sem_02\\06 ICT Project - ITE1943\\CA_03\\Vehicle-Management-System_C-sharp\\Vehical Management System\\AddVehicles.cs",
               "RelativeDocumentMoniker": "Vehical Management System\\AddVehicles.cs",
@@ -42,7 +58,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "addDrivers.cs [Design]",
               "DocumentMoniker": "E:\\BIT\\Sem_02\\06 ICT Project - ITE1943\\CA_03\\Vehicle-Management-System_C-sharp\\Vehical Management System\\addDrivers.cs",
               "RelativeDocumentMoniker": "Vehical Management System\\addDrivers.cs",
@@ -54,7 +70,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "dashboard.cs [Design]",
               "DocumentMoniker": "E:\\BIT\\Sem_02\\06 ICT Project - ITE1943\\CA_03\\Vehicle-Management-System_C-sharp\\Vehical Management System\\dashboard.cs",
               "RelativeDocumentMoniker": "Vehical Management System\\dashboard.cs",
