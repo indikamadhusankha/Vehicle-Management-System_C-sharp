@@ -89,18 +89,18 @@
             // 
             // txtRegNo
             // 
-            this.txtRegNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRegNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRegNo.Location = new System.Drawing.Point(213, 120);
             this.txtRegNo.Name = "txtRegNo";
-            this.txtRegNo.Size = new System.Drawing.Size(223, 29);
+            this.txtRegNo.Size = new System.Drawing.Size(223, 26);
             this.txtRegNo.TabIndex = 3;
             // 
             // txtBand
             // 
-            this.txtBand.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBand.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBand.Location = new System.Drawing.Point(213, 200);
             this.txtBand.Name = "txtBand";
-            this.txtBand.Size = new System.Drawing.Size(223, 29);
+            this.txtBand.Size = new System.Drawing.Size(223, 26);
             this.txtBand.TabIndex = 4;
             // 
             // lableVehiclaType
@@ -153,10 +153,10 @@
             // 
             // txtModel
             // 
-            this.txtModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtModel.Location = new System.Drawing.Point(213, 238);
             this.txtModel.Name = "txtModel";
-            this.txtModel.Size = new System.Drawing.Size(223, 29);
+            this.txtModel.Size = new System.Drawing.Size(223, 26);
             this.txtModel.TabIndex = 8;
             // 
             // lableYearManu
@@ -195,18 +195,18 @@
             // 
             // txtEngineNo
             // 
-            this.txtEngineNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEngineNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEngineNo.Location = new System.Drawing.Point(213, 316);
             this.txtEngineNo.Name = "txtEngineNo";
-            this.txtEngineNo.Size = new System.Drawing.Size(223, 29);
+            this.txtEngineNo.Size = new System.Drawing.Size(223, 26);
             this.txtEngineNo.TabIndex = 13;
             // 
             // txtChassisNo
             // 
-            this.txtChassisNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtChassisNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtChassisNo.Location = new System.Drawing.Point(213, 356);
             this.txtChassisNo.Name = "txtChassisNo";
-            this.txtChassisNo.Size = new System.Drawing.Size(223, 29);
+            this.txtChassisNo.Size = new System.Drawing.Size(223, 26);
             this.txtChassisNo.TabIndex = 14;
             // 
             // lableEngineNumber
