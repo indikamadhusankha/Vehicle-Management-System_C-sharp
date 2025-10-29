@@ -1,26 +1,26 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
-using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Vehical_Management_System
 {
     public partial class AddVehicles : Form
     {
-        private MySqlConnection con;
-        private string connectionString = "server=localhost;user id=root;password=;database=vehical_management";
+        SqlConnection con;
         private string first_Name;
         //private string userRole;
         public AddVehicles(string userRole, string firstName)
         {
             InitializeComponent();
-            con = new MySqlConnection(connectionString);
             first_Name = firstName;
-         
+            con = ConnectionManager.GetConnection();
 
             if (userRole != "Administrator")
             {
                 btnDelete.Hide();
+                btnEditVehicle.Hide();
             }
         }
                
@@ -34,15 +34,15 @@ namespace Vehical_Management_System
                 return false;
             }
 
-            string checkUserQuery = "SELECT COUNT(*) FROM vehicles WHERE registration_number = @RegNo";
+            string checkUserQuery = "SELECT COUNT(*) FROM vehicles WHERE txtRegNo = @RegNo";
 
 
             try
             {
 
-                using (var cmd = new MySqlCommand(checkUserQuery, con))
-                {
                 con.Open(); // Open connection
+                using (var cmd = new SqlCommand(checkUserQuery, con))
+                {
                     cmd.Parameters.AddWithValue("@RegNo", txtRegNo.Text.Trim());
                     int userCount = Convert.ToInt32(cmd.ExecuteScalar());
 
@@ -64,8 +64,6 @@ namespace Vehical_Management_System
                 if (con.State == ConnectionState.Open)
                     con.Close(); // connection closes
             }
-
-
 
             if (txtVehType.Text.Trim() == "")
             {
@@ -115,59 +113,80 @@ namespace Vehical_Management_System
 
         private void btn_add_vehicle_submit_Click(object sender, EventArgs e)
         {
-            
-            if (!ValidateFields())
-                return; 
-
-            try
+            if (btn_add_vehicle_submit.Text == "Add Vehicle")
             {
-                con.Open();
-
+                // 🟢 Insert logic
                 string query = "INSERT INTO vehicles " +
-                               "(registration_number, VehType, brand,model, manufacture_year, engine_number, chassis_number, fuel_type, added_by) " +
-                               "VALUES (@RegNo, @VehType, @Brand, @Model, @YearManuf, @EngineNo, @ChassisNo, @FuelType, @added_by)";
-
-                using (MySqlCommand sql = new MySqlCommand(query, con))
+                               "(txtRegNo, txtVehType, txtBand, txtModel, txtYearManuf, txtEngineNo, txtChassisNo, txtFuelType) " +
+                               "VALUES (@RegNo, @VehType, @Brand, @Model, @YearManuf, @EngineNo, @ChassisNo, @FuelType)";
+                try
                 {
-                    sql.Parameters.AddWithValue("@RegNo", txtRegNo.Text);
-                    sql.Parameters.AddWithValue("@VehType", txtVehType.Text);
-                    sql.Parameters.AddWithValue("@Brand", txtBand.Text);
-                    sql.Parameters.AddWithValue("@Model", txtModel.Text);
-                    sql.Parameters.AddWithValue("@YearManuf", txtYearManuf.Text);
-                    sql.Parameters.AddWithValue("@EngineNo", txtEngineNo.Text);
-                    sql.Parameters.AddWithValue("@ChassisNo", txtChassisNo.Text);
-                    sql.Parameters.AddWithValue("@FuelType", txtFuelType.Text);
-                    sql.Parameters.AddWithValue("@added_by", first_Name);
-
-                    int rows = sql.ExecuteNonQuery();
-
-                    if (rows > 0)
+                    con.Open();
+                    using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-                        MessageBox.Show("Vehicle added successfully!");
-
-                        txtRegNo.Clear();
-                        txtBand.Clear();
-                        txtModel.Clear();
-                        txtEngineNo.Clear();
-                        txtChassisNo.Clear();                        
-                        txtVehType.SelectedIndex = -1;
-                        txtFuelType.SelectedIndex = -1;
+                        cmd.Parameters.AddWithValue("@RegNo", txtRegNo.Text);
+                        cmd.Parameters.AddWithValue("@VehType", txtVehType.Text);
+                        cmd.Parameters.AddWithValue("@Brand", txtBand.Text);
+                        cmd.Parameters.AddWithValue("@Model", txtModel.Text);
+                        cmd.Parameters.AddWithValue("@YearManuf", txtYearManuf.Text);
+                        cmd.Parameters.AddWithValue("@EngineNo", txtEngineNo.Text);
+                        cmd.Parameters.AddWithValue("@ChassisNo", txtChassisNo.Text);
+                        cmd.Parameters.AddWithValue("@FuelType", txtFuelType.Text);
+                        cmd.ExecuteNonQuery();
                     }
-                    else
-                    {
-                        MessageBox.Show("Insert failed!");
-                    }
+                    MessageBox.Show("Vehicle added successfully!");
+                    ClearFields();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+                finally
+                {
+                    con.Close();
+                    Getdata();
                 }
             }
-            catch (Exception ex)
+            else if (btn_add_vehicle_submit.Text == "Update")
             {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                if (con.State == ConnectionState.Open)
-                    con.Close(); // connection closes
-                Getdata();
+                // 🟡 Update logic
+                string query = "UPDATE vehicles SET " +
+                               "txtVehType = @VehType, txtBand = @Brand, txtModel = @Model, txtYearManuf = @YearManuf, " +
+                               "txtEngineNo = @EngineNo, txtChassisNo = @ChassisNo, txtFuelType = @FuelType " +
+                               "WHERE txtRegNo = @RegNo";
+
+                try
+                {
+                    con.Open();
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@RegNo", txtRegNo.Text);
+                        cmd.Parameters.AddWithValue("@VehType", txtVehType.Text);
+                        cmd.Parameters.AddWithValue("@Brand", txtBand.Text);
+                        cmd.Parameters.AddWithValue("@Model", txtModel.Text);
+                        cmd.Parameters.AddWithValue("@YearManuf", txtYearManuf.Text);
+                        cmd.Parameters.AddWithValue("@EngineNo", txtEngineNo.Text);
+                        cmd.Parameters.AddWithValue("@ChassisNo", txtChassisNo.Text);
+                        cmd.Parameters.AddWithValue("@FuelType", txtFuelType.Text);
+                        cmd.ExecuteNonQuery();
+                    }
+                    MessageBox.Show("Vehicle updated successfully!");
+
+                    // Reset form
+                    btn_add_vehicle_submit.Text = "Add Vehicle";
+                    txtRegNo.ReadOnly = false;
+                    ClearFields();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error updating vehicle: " + ex.Message);
+                }
+                finally
+                {
+                    con.Close();
+                    Getdata();
+                }
             }
         }
 
@@ -180,32 +199,50 @@ namespace Vehical_Management_System
         {
             try
             {
-                if (con.State != ConnectionState.Open)
+               // if (con.State != ConnectionState.Open)
                     con.Open();
 
-                using (MySqlCommand cmd = new MySqlCommand(
-                    "SELECT registration_number, VehType, brand, owner_name, owner_contact, added_by, date_added FROM vehicles", con))
+                using (SqlCommand cmd = new SqlCommand(
+                    "SELECT * FROM vehicles", con))
                 {
-                    using (MySqlDataAdapter sd = new MySqlDataAdapter(cmd))
+                    using (SqlDataAdapter sd = new SqlDataAdapter(cmd))
                     {
                         DataTable dt = new DataTable();
                         sd.Fill(dt);
                         dataGridView1.DataSource = dt;
                     }
                 }
+            } catch(Exception ex)
+            {
+                MessageBox.Show("Message: " + ex.Message);
             }
             finally
             {
-                if (con.State == ConnectionState.Open)
+               // if (con.State == ConnectionState.Open)
                     con.Close();
             }
+        }
+
+
+        // Clear all textbox feilds
+        private void ClearFields()
+        {
+            txtRegNo.Clear();
+            txtVehType.SelectedIndex = -1;            
+            txtBand.Clear();
+            txtModel.Clear();
+            txtYearManuf.Clear();
+            txtEngineNo.Clear();
+            txtChassisNo.Clear();
+            txtFuelType.SelectedIndex = -1;
+            
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                string regNo = dataGridView1.SelectedRows[0].Cells["registration_number"].Value.ToString();
+                string regNo = dataGridView1.SelectedRows[0].Cells["txtRegNo"].Value.ToString();
 
                 DialogResult confirm = MessageBox.Show("Are you sure you want to delete this vehicle?",
                                                        "Confirm Delete", MessageBoxButtons.YesNo);
@@ -217,8 +254,8 @@ namespace Vehical_Management_System
                         if (con.State != ConnectionState.Open)
                             con.Open();
 
-                        using (MySqlCommand cmd = new MySqlCommand(
-                            "DELETE FROM vehicles WHERE registration_number = @RegNo", con))
+                        using (SqlCommand cmd = new SqlCommand(
+                            "DELETE FROM vehicles WHERE txtRegNo = @RegNo", con))
                         {
                             cmd.Parameters.AddWithValue("@RegNo", regNo);
                             cmd.ExecuteNonQuery();
@@ -235,6 +272,7 @@ namespace Vehical_Management_System
                     {
                         if (con.State == ConnectionState.Open)
                             con.Close();
+                        Getdata();
                     }
                 }
             }
@@ -244,7 +282,51 @@ namespace Vehical_Management_System
             }
         }
 
+        private void btnEditVehicle_Click(object sender, EventArgs e)
+        {
+            if(dataGridView1.SelectedRows.Count > 0)
+            {
+                string regNo = dataGridView1.SelectedRows[0].Cells["txtRegNo"].Value.ToString();
+                DialogResult editClick = MessageBox.Show("Are you sure you want to Edit this vehicle?",
+                                                       "Confirm Edit", MessageBoxButtons.YesNo);
 
+                if (editClick == DialogResult.Yes) {
+
+                    
+                    try {
+
+
+                        btn_add_vehicle_submit.Text = "Update";
+                        txtRegNo.Text = regNo;
+                        txtRegNo.ReadOnly = true;
+                        txtVehType.Text = dataGridView1.SelectedRows[0].Cells["txtVehType"].Value.ToString();
+                        txtBand.Text = dataGridView1.SelectedRows[0].Cells["txtBand"].Value.ToString();
+                        txtModel.Text = dataGridView1.SelectedRows[0].Cells["txtModel"].Value.ToString();
+                        txtYearManuf.Text = dataGridView1.SelectedRows[0].Cells["txtYearManuf"].Value.ToString();         
+                        txtEngineNo.Text = dataGridView1.SelectedRows[0].Cells["txtEngineNo"].Value.ToString();
+                        txtChassisNo.Text = dataGridView1.SelectedRows[0].Cells["txtChassisNo"].Value.ToString();
+                        txtFuelType.Text = dataGridView1.SelectedRows[0].Cells["txtFuelType"].Value.ToString();
+
+
+
+
+                        
+
+                    }
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show("messge :" + ex.Message);
+                    } finally
+                    {
+                        
+                    }                
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please Select Vehicle!");
+            }
+        }
     }
 
 }

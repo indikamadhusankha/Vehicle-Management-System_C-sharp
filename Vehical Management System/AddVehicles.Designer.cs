@@ -46,12 +46,13 @@
             this.lableEngineNumber = new System.Windows.Forms.Label();
             this.lableChassisNumber = new System.Windows.Forms.Label();
             this.btn_add_vehicle_submit = new System.Windows.Forms.Button();
-            this.txtYearManuf = new System.Windows.Forms.DateTimePicker();
             this.vehicle_managementDataSet = new Vehical_Management_System.vehicle_managementDataSet();
             this.vehiclemanagementDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnEditVehicle = new System.Windows.Forms.Button();
+            this.txtYearManuf = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.vehicle_managementDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehiclemanagementDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -244,15 +245,6 @@
             this.btn_add_vehicle_submit.UseVisualStyleBackColor = false;
             this.btn_add_vehicle_submit.Click += new System.EventHandler(this.btn_add_vehicle_submit_Click);
             // 
-            // txtYearManuf
-            // 
-            this.txtYearManuf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtYearManuf.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtYearManuf.Location = new System.Drawing.Point(213, 279);
-            this.txtYearManuf.Name = "txtYearManuf";
-            this.txtYearManuf.Size = new System.Drawing.Size(223, 26);
-            this.txtYearManuf.TabIndex = 5;
-            // 
             // vehicle_managementDataSet
             // 
             this.vehicle_managementDataSet.DataSetName = "vehicle_managementDataSet";
@@ -285,14 +277,37 @@
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // btnEditVehicle
+            // 
+            this.btnEditVehicle.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnEditVehicle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditVehicle.FlatAppearance.BorderSize = 0;
+            this.btnEditVehicle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditVehicle.Location = new System.Drawing.Point(845, 479);
+            this.btnEditVehicle.Name = "btnEditVehicle";
+            this.btnEditVehicle.Size = new System.Drawing.Size(101, 36);
+            this.btnEditVehicle.TabIndex = 20;
+            this.btnEditVehicle.Text = "Edit";
+            this.btnEditVehicle.UseVisualStyleBackColor = false;
+            this.btnEditVehicle.Click += new System.EventHandler(this.btnEditVehicle_Click);
+            // 
+            // txtYearManuf
+            // 
+            this.txtYearManuf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtYearManuf.Location = new System.Drawing.Point(213, 280);
+            this.txtYearManuf.Name = "txtYearManuf";
+            this.txtYearManuf.Size = new System.Drawing.Size(223, 26);
+            this.txtYearManuf.TabIndex = 21;
+            // 
             // AddVehicles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1115, 578);
+            this.Controls.Add(this.txtYearManuf);
+            this.Controls.Add(this.btnEditVehicle);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.txtYearManuf);
             this.Controls.Add(this.btn_add_vehicle_submit);
             this.Controls.Add(this.lableChassisNumber);
             this.Controls.Add(this.lableEngineNumber);
@@ -341,11 +356,12 @@
         private System.Windows.Forms.Label lableEngineNumber;
         private System.Windows.Forms.Label lableChassisNumber;
         private System.Windows.Forms.Button btn_add_vehicle_submit;
-        private System.Windows.Forms.DateTimePicker txtYearManuf;
         private System.Windows.Forms.BindingSource vehiclemanagementDataSetBindingSource;
         private vehicle_managementDataSet vehicle_managementDataSet;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnEditVehicle;
+        private System.Windows.Forms.TextBox txtYearManuf;
     }
 }
