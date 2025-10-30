@@ -146,6 +146,12 @@
       <DependentUpon>assignDriver.cs</DependentUpon>
     </Compile>
     <Compile Include="ConnectionManager.cs" />
+    <Compile Include="createRoutes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="createRoutes.Designer.cs">
+      <DependentUpon>createRoutes.cs</DependentUpon>
+    </Compile>
     <Compile Include="manageUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="assignDriver.resx">
       <DependentUpon>assignDriver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="createRoutes.resx">
+      <DependentUpon>createRoutes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="manageUser.resx">
       <DependentUpon>manageUser.cs</DependentUpon>
